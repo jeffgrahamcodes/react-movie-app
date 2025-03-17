@@ -1,15 +1,17 @@
 import './App.css';
 import './styles.css';
 
+import Header from './components/Header';
+
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <h1 className="dd">Welcome to MovieFinder</h1>
-        <footer className="footer">
-          <p className="footer">Footer Content</p>
-        </footer>
-      </header>
+      <div className="container">
+        <Header />
+      </div>
+      <footer className="footer">
+        <p className="footer">Footer Content</p>
+      </footer>
     </div>
   );
 }
