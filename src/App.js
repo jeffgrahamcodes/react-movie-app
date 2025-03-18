@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +14,15 @@ import './App.css';
 import './styles.css';
 
 function App() {
+  const [movies, setMovies] = useState([]);
+  const [watchlist, setWatchList] = useState([]);
+
+  useEffect(() => {
+    fetch('movies.json')
+      .then((res) => res.json())
+      .then((data) => setMovies(data));
+  }, []);
+
   return (
     <div className="App">
       <div className="container">
@@ -29,7 +39,7 @@ function App() {
             </ul>
           </nav>
           <Routes>
-            <Route path="/" element={<MovieGrid />} />
+            <Route path="/" element={<MovieGrid movies={movies} />} />
             <Route path="/watchlist" element={<WatchList />} />
           </Routes>
         </Router>
