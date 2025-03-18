@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# MovieFinder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MovieFinder is a web application that allows users to search, browse, and manage a watchlist of movies. The app provides filtering options based on genre and rating, and allows users to add or remove movies from their personal watchlist.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Movie Search:** Search movies by title.
+- **Genre & Rating Filters:** Filter movies based on genre and user ratings.
+- **Watchlist Management:** Add and remove movies from your personal watchlist.
+- **Dynamic UI:** Responsive and interactive movie cards.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Header
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Displays the application logo and a subtitle.
 
-### `npm test`
+- Located in `Header.js`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Footer
 
-### `npm run build`
+Displays copyright information.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Located in `Footer.js`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. MovieGrid
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Displays a grid of movies that users can filter and search through.
 
-### `npm run eject`
+- Located in `MovieGrid.js`
+- Includes search, genre, and rating filtering options.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. MovieCard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Displays individual movie details, including title, genre, rating, and a watchlist toggle.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Located in `MovieCard.js`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 5. WatchList
 
-## Learn More
+Displays movies that have been added to the watchlist.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Located in `WatchList.js`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
 
-### Code Splitting
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```sh
+   git clone https://github.com/jeffgrahamcodes/react-movie-app.git
+   cd react-movie-app
+   ```
 
-### Analyzing the Bundle Size
+2. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```sh
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. Start the development server:
+   ```sh
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Usage
 
-### Advanced Configuration
+- Use the search bar to find movies by title.
+- Use the dropdown filters to narrow down movies by genre and rating.
+- Click on the watchlist toggle to add or remove movies from your watchlist.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+- React.js
+- CSS for styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
