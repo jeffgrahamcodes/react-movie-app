@@ -18,6 +18,14 @@ export default function MovieGrid() {
     setSearchTerm(e.target.value);
   };
 
+  const handleGenreChange = (e) => {
+    setGenre(e.target.value);
+  };
+
+  const handleRatingChange = (e) => {
+    setRating(e.target.value);
+  };
+
   const filteredMovies = movies.filter((movie) =>
     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -34,21 +42,33 @@ export default function MovieGrid() {
       <div className="filter-bar">
         <div className="filter-slot">
           <label htmlFor="">Genre</label>
-          <select className="filter-dropdown" name="" id="">
-            <option value="">All Genres</option>
-            <option value="">Action</option>
-            <option value="">Drama</option>
-            <option value="">Fantasy</option>
-            <option value="">Horror</option>
+          <select
+            className="filter-dropdown"
+            name=""
+            id=""
+            value={genre}
+            onChange={handleGenreChange}
+          >
+            <option value="All Genres">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Horror">Horror</option>
           </select>
         </div>
         <div className="filter-slot">
           <label htmlFor="">Rating</label>
-          <select className="filter-dropdown" name="" id="">
-            <option value="">All</option>
-            <option value="">Good</option>
-            <option value="">Ok</option>
-            <option value="">Bad</option>
+          <select
+            className="filter-dropdown"
+            name=""
+            id=""
+            value={rating}
+            onChange={handleRatingChange}
+          >
+            <option value="All">All</option>
+            <option value="Good">Good</option>
+            <option value="Ok">Ok</option>
+            <option value="Bad">Bad</option>
           </select>
         </div>
       </div>
